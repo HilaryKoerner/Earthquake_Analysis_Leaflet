@@ -14,28 +14,43 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //earthquake link
 var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson"
 
-
+//circle color based on size
 var magnitudeSize = {
-  ''
-}
+
+};
 
 //earthquake data
 d3.json(url)
   .then(function(data) {
-    // Creating a GeoJSON layer with the retrieved data
-    L.geoJson(data, {
-      style: function(feature) {
-        return{
-          color: "white",
-          fillColor: magnitudeSize(feature.properties.mag),
+    console.log(data);
 
-        }
-      }
-      {
-        color: "",
-        size: magnitudeSize(data),
-    }).addTo(myMap);
-});
+    var quakes = [];
+
+    data.forEach(function(quake) {
+      var quake = L.circle([quake.coordinates]);
+      quake.addTo(myMap)
+      quakes.push(quake);
+    });
+  })
+
+
+  bubbles = L.bubbleLayer(data, { property: "mag" })
+
+
+//     // Creating a GeoJSON layer with the retrieved data
+//     L.geoJson(data, {
+//       style: function(feature) {
+//         return{
+//           color: "white",
+//           fillColor: magnitudeSize(feature.properties.mag),
+
+//         }
+//       }
+//       {
+//         color: "",
+//         size: magnitudeSize(data),
+//     }).addTo(myMap);
+// });
 
 
 
