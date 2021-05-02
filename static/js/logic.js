@@ -42,12 +42,12 @@ var myMap = L.map("map", {
         pointToLayer: function(feature, latlng) {
           return L.circleMarker(
             latlng, {
-              radius: +feature.properties.mag*3,
+              radius: +feature.properties.mag*4,
               fillColor: fillColor(+feature.geometry.coordinates[2]),
               color: "black",
-              weight: 1,
+              weight: 2,
               opacity: .2,
-              fillOpacity: .8
+              fillOpacity: .6
             }
           );
         }
