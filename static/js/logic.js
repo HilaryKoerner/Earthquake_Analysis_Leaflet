@@ -44,7 +44,7 @@ var myMap = L.map("map", {
             latlng, {
               radius: +feature.properties.mag*3,
               fillColor: fillColor(+feature.geometry.coordinates[2]),
-              color: "white",
+              color: "black",
               weight: 1,
               opacity: .2,
               fillOpacity: .8
