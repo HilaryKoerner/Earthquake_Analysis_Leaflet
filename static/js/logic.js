@@ -69,7 +69,7 @@ var myMap = L.map("map", {
     return div;
     };
   
-    // Adding the legend to the map
+    // Add the legend to the map
     legend.addTo(myMap);
   };
   
