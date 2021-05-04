@@ -14,6 +14,7 @@ var myMap = L.map("map", {
   //earthquake link
   var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
   
+  // add popup feature to display info on earthquakes
   function onEachFeature(feature, layer) {
     var content = (
   
