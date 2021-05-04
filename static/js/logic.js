@@ -1,4 +1,3 @@
-
 // Create a map object.
 var myMap = L.map("map", {
     center: [41.878113, -87.629799],
@@ -17,8 +16,7 @@ var myMap = L.map("map", {
   // add popup feature to display info on earthquakes
   function onEachFeature(feature, layer) {
     var content = (
-  
-      "<div>Location:"+ feature.properties.place+"</div>"+"<div>Magnitude:"+ feature.properties.mag+"</div>"+"<div>Depth:"+ feature.geometry.coordinates[2]+"</div>"
+    "<div>Location:"+ feature.properties.place+"</div>"+"<div>Magnitude:"+ feature.properties.mag+"</div>"+"<div>Depth:"+ feature.geometry.coordinates[2]+"</div>"
     );
     layer.bindPopup(content);
   }
@@ -37,7 +35,6 @@ var myMap = L.map("map", {
 
   
   function createMap(mapData) {
-    // L.marker([87,41]).addTo(myMap).bindPopup("Hello").openPopup();
     L.geoJSON(mapData, 
       {
         onEachFeature: onEachFeature,
@@ -76,7 +73,6 @@ var myMap = L.map("map", {
     legend.addTo(myMap);
   };
   
-
   //earthquake data
   d3.json(url)
     .then(function(data) {
