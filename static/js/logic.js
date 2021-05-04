@@ -22,6 +22,7 @@ var myMap = L.map("map", {
     layer.bindPopup(content);
   }
   
+  // hard code the colors and set the range below
   colors = ["#32CD32",'#478778',"#7CFC00", "#ccff33", "#ffcc00", "#ff3300"]
 
   function fillColor(depth) {
@@ -54,7 +55,7 @@ var myMap = L.map("map", {
       }
     ).addTo(myMap);
 
-    // add legend
+    // add legend (use color and depth)
 
     var legend = L.control({ position: "bottomright" });
     legend.onAdd = function() {
@@ -68,13 +69,10 @@ var myMap = L.map("map", {
             + depth[i] + (depth[i + 1] ? "&ndash;" + depth[i + 1] + "<br>" : "+");
     }
     return div;
-  
-
     };
   
     // Adding the legend to the map
     legend.addTo(myMap);
-  
   };
   
 
@@ -84,14 +82,3 @@ var myMap = L.map("map", {
       console.log(data);
       createMap(data);
       });
-
-
-//          // set up legend
-//     var legend = L.control({
-//         position: "bottomright"
-//     });
-//     legend.onAdd = function createLegend(legend)
-//         { 
-//         }
-//         legend.addTo(myMap);
-//   }
