@@ -22,7 +22,7 @@ var myMap = L.map("map", {
     layer.bindPopup(content);
   }
   
-  colors = ["#009900", "#cccc00", " #ccff33",  "#00802b", "#ffcc00", "#ff3300"]
+  colors = ["#32CD32",'#478778',"#7CFC00", "#ccff33", "#ffcc00", "#ff3300"]
 
   function fillColor(depth) {
     if (depth <=10) return colors[0];
@@ -57,10 +57,17 @@ var myMap = L.map("map", {
     // add legend
 
     var legend = L.control({ position: "bottomright" });
-    legend.onAdd = function(map) {
+    legend.onAdd = function() {
       var div = L.DomUtil.create("div", "info legend");
-       depth = [10, 30, 40, 50, 70, 90];
-       labels = [];
+       
+      var depth = [-10, 10, 30, 50, 70, 90];
+      var colors = ["#32CD32",'#478778',"#7CFC00", "#ccff33", "#ffcc00", "#ff3300"];
+
+      for (var i = 0; i < depth.length; i++) {
+        div.innerHTML += "<i style='background: " + colors[i] + "'></i> "
+            + depth[i] + (depth[i + 1] ? "&ndash;" + depth[i + 1] + "<br>" : "+");
+    }
+    return div;
   
       // Add the minimum and maximum.
       var legendInfo = "<h1>Depth of Earthquake</h1>" +
