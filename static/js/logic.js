@@ -53,20 +53,52 @@ var myMap = L.map("map", {
         }
       }
     ).addTo(myMap);
-    var legend = L.control({
-        position: "bottomright"
-    });
-    legend.onAdd = function createLegend(legend)
-        { 
-        }
-        legend.addTo(myMap);
-  }
 
-// on add fcuntion
+    // add legend
+
+    var legend = L.control({ position: "bottomright" });
+    legend.onAdd = function(map) {
+      var div = L.DomUtil.create("div", "info legend");
+       depth = [10, 30, 40, 50, 70, 90];
+       labels = [];
   
+      // Add the minimum and maximum.
+      var legendInfo = "<h1>Depth of Earthquake</h1>" +
+        "<div class=\"labels\">" +
+          "<div class=\"min\">" + limits[0] + "</div>" +
+          "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
+        "</div>";
+  
+      div.innerHTML = legendInfo;
+  
+      limits.forEach(function(limit, index) {
+        labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
+      });
+  
+      div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+      return div;
+    };
+  
+    // Adding the legend to the map
+    legend.addTo(myMap);
+  
+  };
+  
+
   //earthquake data
   d3.json(url)
     .then(function(data) {
       console.log(data);
       createMap(data);
       });
+
+
+//          // set up legend
+//     var legend = L.control({
+//         position: "bottomright"
+//     });
+//     legend.onAdd = function createLegend(legend)
+//         { 
+//         }
+//         legend.addTo(myMap);
+//   }
