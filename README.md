@@ -15,6 +15,8 @@ The depth of each earthquake is represented by the color. The colors and depth r
 I used a function to add a circle marker to the map with the radius dynamically created by the magnitude of the earthquake and pulling in the color with the "fillColor" function. 
 ### Legend:
 Using a legend, I displayed the depth range and color range in the bottom right corner of the website. 
+![Legend_github](https://user-images.githubusercontent.com/74504885/122318178-46c34600-cee4-11eb-969d-a248836f4010.PNG)
+
 ### Popup:
 To display the specific data for each earthquake, I created a feature to pulled in and displayed the location, magnitude, and depth. 
 
