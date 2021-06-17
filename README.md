@@ -13,8 +13,8 @@ The earthquake data includes information on the magnitude, coordinates, name of 
 The depth of each earthquake is represented by the color. The colors and depth ranges were hard coded using a funtion called "fillColor". I selected a color scale that would represent the depths by lighter and darker shades of green, red, orange and yellow. 
 ### Magnitude: 
 I used a function to add a circle marker to the map with the radius dynamically created by the magnitude of the earthquake and pulling in the color with the "fillColor" function. 
+### Legend:
+Using a legend, I displayed the depth range and color range in the bottom right corner of the website. 
+### Popup:
+To display the specific data for each earthquake, I created a feature to pulled in and displayed the location, magnitude, and depth. 
 
-
-The challenge for this assignment was to create a map that displayed earthquake data pulled from the USGS website of earthquake data. I looked at all earthquakes occuring in the last seven days. 
-
-I started by crateing a map layer and pulling in openstreet map. I created functions that would bind a popup, assign color based on depth, and a function that would place the bubble markers based on depth and magnitude to the map. Finally, I added a legend that coordinates with the range of colors and depths. 
