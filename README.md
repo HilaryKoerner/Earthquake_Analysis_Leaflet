@@ -1,4 +1,4 @@
-# leaflet_challenge
+# Earthquake Analysis using Leaflet
 
 The challenge for this assignment was to create a map that displayed earthquake data pulled from the USGS website of earthquake data. I looked at all earthquakes occuring in the last seven days. 
 
