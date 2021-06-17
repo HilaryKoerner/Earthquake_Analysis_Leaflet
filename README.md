@@ -5,6 +5,8 @@ The data for this challenge comes from the United States Geological Survey, or U
 
 ## Pulling in the Data and Creating the Map
 The data for this analysis comes from the url: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson. On this site, there is the option to select earthquakes from the past day, week, month, etc. The specific URL I selected contains data on all earthquakes from the past seven days. To create the base map, I created a map object and added a tile layer using open street map. 
+![leaflet_map](https://user-images.githubusercontent.com/74504885/122318764-3cee1280-cee5-11eb-9a68-50301f839c99.PNG)
+
 
 ## Displaying the Data
 The earthquake data includes information on the magnitude, coordinates, name of the location, and depth. 
