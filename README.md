@@ -1,7 +1,7 @@
 # Earthquake Analysis using Leaflet
 
 ## The Data
-The data for this challenge comes from the United States Geological Survey, or USGS for short. The USGS is responsible for providing scientific data about natural hazards, the health of our ecosystems and environment; and the impacts of climate and land-use change. Their scientists develop new methods and tools to supply timely, relevant, and useful information about the Earth and its processes. 
+The data for this challenge comes from the United States Geological Survey, or USGS for short. The USGS is responsible for providing scientific data about natural hazards, the health of our ecosystems and environment, and the impacts of climate change and land-use change. The USGS scientists develop new methods and tools to supply timely, relevant, and useful information about the Earth and its processes. 
 
 ## Pulling in the Data and Creating the Map
 The data for this analysis comes from the url: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson. On this site, there is the option to select earthquakes from the past day, week, month, etc. The specific URL I selected contains data on all earthquakes from the past seven days. To create the base map, I created a map object and added a tile layer using open street map. 
