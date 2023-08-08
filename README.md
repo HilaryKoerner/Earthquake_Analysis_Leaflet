@@ -19,5 +19,5 @@ Using a legend, I displayed the depth range and color range in the bottom right 
 ![Legend_github](https://user-images.githubusercontent.com/74504885/122318178-46c34600-cee4-11eb-969d-a248836f4010.PNG)
 
 ### Popup:
-To display the specific data for each earthquake, I created a feature to pulled in and display the location, magnitude, and depth. 
+To display the specific data for each earthquake, I created a feature to pull in and display the location, magnitude, and depth. 
 
